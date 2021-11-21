@@ -1,0 +1,445 @@
+*::before,*::after, *{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    /*
+    E9322E original
+    C26FFA roxo
+    9057FF roxo2
+    8AFAC3 verde
+    6AFA8A verde2
+    7AD0FF azul
+    FFDE48 amarelo
+    */
+    --background: #181619;
+    --principal: #E9322E;
+    --principal-opacidade: #E9322E91;
+    --secundaria: #45433E;
+    --secundaria-opacidade: #45433e91;
+    --titulo: #FFFFFF;
+    --subtitulo: #bfc0be;
+}
+body{
+    overflow-x: hidden;
+}
+
+*::selection{
+	background-color: #E9322E;
+	color: black;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* COMEÇO MENU */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.267);
+}
+header .container{
+    width: 85%;
+}
+nav{
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+}
+.logo_box{
+    width: 15%;
+    height: 100%;
+}
+.logo{
+    width: 30%;
+    cursor: pointer;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    margin: 0px 2px;
+    padding: 0px 20px;
+}
+nav ul li a{
+    color: var(--titulo);
+    text-decoration: none;
+    font-family: 'Poppins';
+    padding: 5px 0px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom .5s;
+}
+nav ul li a:hover{
+    border-bottom: 2px solid var(--principal-opacidade);
+}
+/* FIM MENU */
+
+
+
+/* COMEÇO BANNER */
+main{
+    width: 100vw;
+}
+
+.banner{
+    width: 100vw;
+    height: 100vh;
+    background: url('../imgs/background.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.main_container{
+    margin-top: 10%;
+    width: 100%;
+    height: 30%;
+    justify-content: flex-start;
+}
+
+.main_title{
+    text-align: center;
+    z-index: 1;
+    color: var(--titulo);
+    font-weight: 500;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 3px  var(--secundaria-opacidade);
+}
+
+.main_subtitle{
+    font-weight: 400;
+    color: var(--subtitulo);
+    font-size: 1.5rem;
+}
+
+
+.main_btns{
+    margin-top: 90px;
+    width: 32%;
+    min-width: 460px;
+    justify-content: space-between;
+}
+
+.main_btns a{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px 5px;
+    width: 50%;
+    color: white;
+    text-shadow: 1px 1px 3px var(--secundaria-opacidade);
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: var(--principal);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.267);
+    transition: box-shadow .3s;
+}
+
+.main_btns a:hover{
+    box-shadow: 0px 0px 10px var(--principal);
+}
+
+.link_icon{
+    padding-left: 10px;
+}
+
+.btn2{
+    background-color: transparent !important;
+    border: 3px solid var(--principal);
+    backdrop-filter: blur(2px);
+}
+/* FIM BANNER */
+
+
+
+
+/* COMEÇO ABOUT ME */
+.about{
+    width: 100vw;
+    height: auto;
+    padding-bottom: 5%;
+    background-color: var(--principal);
+}
+
+.about_container{
+    width: 85%;
+    height: 100%;
+}
+
+.about_texts{
+    width: 100%;
+    height: 80%;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.about_title{
+    color: white;
+    text-shadow: 1px 1px 3px var(--secundaria-opacidade);
+}
+
+.about_desc{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 3%;
+    text-shadow: 1px 1px 3px var(--secundaria-opacidade);
+}
+
+.about_cards{
+    margin-top: 8%;
+    width: 100%;
+    min-width: 350px;
+    height: 100%;
+    border-radius: 7px;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.30);
+}
+
+.card{
+    flex: 1;
+    height: 110%;
+    background-color: #f1f1f1;
+    position: relative;
+    top: -35%;
+    padding-bottom: 3%;
+}
+
+.card:nth-child(2){
+    background-color: #f1f1f1;
+    border-left: .1px solid var(--subtitulo);
+    border-right: .1px solid var(--subtitulo);
+}
+
+.card:nth-child(1){
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.card:nth-child(3){
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.card .container{
+    width: 80%;
+    margin-top: 10%;
+}
+.card_icon{
+    width: 28%;
+}
+.card h1{
+    margin-top: 8%;
+}
+.card p{
+    margin-top: 8%;
+    text-align: center;
+}
+
+
+
+/* COMECO PROJETOS */
+.projetos{
+    width: 100vw;
+    height: auto;
+    padding-bottom: 16%;
+    background-color: var(--background);
+}
+
+.projetos_container{
+    width: 85%;
+    height: auto;
+}
+
+.projetos_title{
+    margin-top: 10%;
+    color: white;
+    text-shadow: 1px 1px 3px var(--secundaria-opacidade);
+    border-bottom: 5px solid var(--principal);
+}
+
+.projetos_box{
+    margin-top: 8%;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.pj_card{
+    min-width: 230px;
+    width: 30%;
+    min-height: 216px;
+    height: 216px;
+    overflow: hidden;
+    margin-bottom: 1.3%;
+}
+
+.pj_card img{
+    min-width: 230px;
+    width: 384px;
+    transition: .3s;
+}
+.pj_card:hover .on_click{
+    opacity: 1;
+}
+.pj_card:hover img{
+    transform: scale(1.2);
+}
+
+.pj_card .on_click{
+    opacity: 0;
+    min-width: 384px;
+    width: 384px;
+    min-height: 216px;
+    height: 216px;
+    background-color: #20202067;
+    position: relative;
+    top: -100%;
+    transition: .3s;
+    backdrop-filter: blur(6px);
+}
+
+.pj_card h1{
+    color: var(--titulo);
+    font-size: 3rem;
+    font-weight: 500;
+    margin-top: 1%;
+    transition: .5s;
+}
+.pj_card_btns{
+    margin-top: 10%;
+}
+.pj_card_btns a {
+    padding: 3px;
+    background-color: var(--principal);
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-family: 'Poppins';
+    margin-right: 15px;
+    padding: 10px 15px;
+    border-radius: 3px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.527);
+}
+
+
+
+/* FIM PROJETOS */
+
+@media only screen and (min-width:550px) and (max-width:850px) {
+    .main_container{
+        margin-top: 15%;
+    }
+
+    .about_title{
+        font-size: 2rem;  
+    }
+    .about_desc{
+        font-size: 1.0rem;    
+    }
+    .card h1{
+        font-size: 1.2rem;
+    }
+    .card p{
+        font-size: 0.8rem;
+    }
+
+    .projetos{
+        height: 150vh;
+    }
+    .projetos_title{
+        margin-top: 50px;
+        font-size: 2rem;  
+    }
+    .projetos_box{
+        margin-top: 8%;
+        flex-direction: column;
+    }
+    .pj_card{
+        min-width: 380px;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (min-width:320px) and (max-width:550px) {
+    .main_container{
+        margin-top: 20%;
+    }
+    .main_title{
+        font-size: 2.0rem;
+    }
+    .main_subtitle{
+        font-size: 1.0rem;
+    }
+    .main_btns{
+        position: relative;
+        min-width: 450px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main_btns a{
+        margin-top: 15px;
+    }
+    
+
+    .about_title{
+        font-size: 1.5rem;  
+    }
+    .about_desc{
+        font-size: 1.0rem;    
+    }
+    .card h1{
+        margin-top: 4%;
+        font-size: 1.2rem;
+    }
+    .card p{
+        margin-top: 4%;
+        font-size: 0.8rem;
+    }
+    .about_cards{
+        margin-top: 60%;
+        flex-direction: column;
+
+    }
+    .card_icon{
+        width: 20%;
+    }
+    .card:nth-child(1){
+        border-radius: 0px;
+        box-shadow: 0px 0px 0px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .card:nth-child(2){
+        box-shadow: 0px 0px 0px;
+        border-radius: 0px;
+        border-top: .1px solid var(--subtitulo);
+        border-bottom: .1px solid var(--subtitulo);
+    }
+    .card:nth-child(3){
+        border-radius: 0px;
+        box-shadow: 0px 0px 0px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    
+
+    .projetos{
+        height: auto;
+        padding: 100px 0;
+    }
+    .projetos_title{
+        margin-top: 5%;
+        font-size: 2rem;  
+    }
+    .projetos_box{
+        margin-top: 12%;
+        flex-direction: column;
+    }
+    .pj_card{
+        min-width: 300px;
+        margin-bottom: 10px;
+    }
+}

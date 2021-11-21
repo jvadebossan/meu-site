@@ -1,0 +1,43 @@
+*::before,*::after, *{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    --background: #181619;
+    --principal: #E9322E;
+    --secundaria: #45433E;
+    --secundaria-opacidade: #45433e91;
+    --titulo: #FFFFFF;
+    --subtitulo: #bfc0be;
+}
+/*body*/
+body{
+    background-color: var(--background);
+    font-family: 'Poppins';
+}
+
+.flex{
+    display: flex;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.align{
+    display: flex;
+    align-items: center;
+}
+
+.justify{
+    display: flex;
+    justify-content: center;
+}
+
+
